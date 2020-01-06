@@ -1,0 +1,25 @@
+{
+  "name": "webpack-udemy",
+  "version": "1.0.0",
+  "description": "https://www.udemy.com/course/webpack-beyond-the-basics/learn/lecture/8445416#overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankurnecessary/webpack-udemy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankurnecessary/webpack-udemy/issues"
+  },
+  "homepage": "https://github.com/ankurnecessary/webpack-udemy#readme",
+  "dependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
