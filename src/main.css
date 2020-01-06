@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #444;
+}
+
+h1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: bold 5em sans-serif;
+  color: white;
+  text-shadow: 0 0 20px #000;
+}
