@@ -3,11 +3,21 @@ body {
   background-color: #444;
 }
 
-h1 {
-  height: 100vh;
+.profile {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  height: 100vh;
+}
+
+img {
+  border-radius: 100%;
+  width: 300px;
+  box-shadow: 0 0 20px #000;
+}
+
+h1 {
   font: bold 5em sans-serif;
   color: white;
   text-shadow: 0 0 20px #000;

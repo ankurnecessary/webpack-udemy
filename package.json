@@ -4,7 +4,8 @@
   "description": "https://www.udemy.com/course/webpack-beyond-the-basics/learn/lecture/8445416#overview",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config=./config/webpack.dev.js",
+    "build": "webpack --config=./config/webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   "homepage": "https://github.com/ankurnecessary/webpack-udemy#readme",
   "dependencies": {
     "css-loader": "^3.4.1",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
