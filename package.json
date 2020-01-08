@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/ankurnecessary/webpack-udemy#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "css-loader": "^3.4.1",
     "extract-loader": "^3.1.0",
     "file-loader": "^5.0.2",
