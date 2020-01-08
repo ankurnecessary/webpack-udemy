@@ -1,8 +1,9 @@
 const path = require("path");
 module.exports = {
 	entry: {
-		main: ['./src/main.js']
+		main: ['babel-polyfill', './src/main.js']
 	},
+	devtool: 'inline-source-map', // Don't use it in production
 	mode: 'development',
 	output: {
 		filename: '[name]-bundle.js',
@@ -17,6 +18,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
+				exclude: /node_modules/,
 				use: [
 					{
 						loader: 'babel-loader'
