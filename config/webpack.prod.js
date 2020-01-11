@@ -1,19 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 module.exports = {
 	entry: {
-		main: ['babel-polyfill', './src/main.js']
+		main: ['./src/main.js']
 	},
-	devtool: 'inline-source-map', // Don't use it in production
-	mode: 'development',
+	mode: 'production',
 	output: {
 		filename: '[name]-bundle.js',
 		path: path.resolve(__dirname, '../dist'),
-		// publicPath: "/"
-	},
-	devServer: {
-		contentBase: "dist",
-		overlay: true
+		publicPath: "/"
 	},
 	module: {
 		rules: [
@@ -30,7 +28,7 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					{
-						loader: "style-loader"
+						loader: MiniCSSExtractPlugin.loader
 					},
 					{
 						loader: "css-loader"
@@ -41,7 +39,7 @@ module.exports = {
 				test: /\.html$/,
 				use: [
 					{
-						loader: "html-loader",
+						loader: "html-loader"
 					}
 				]
 			},
@@ -62,6 +60,10 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
+		}),
+		new OptimizeCSSAssetsPlugin(),
+		new MiniCSSExtractPlugin({
+			filename: "[name]-[contenthash].css"
 		})
 	]
 }
